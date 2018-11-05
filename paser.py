@@ -46,6 +46,6 @@ def get_flats(url, save_file):
             price = flat['price']
             link = flat['url']
             result.append(f'{i + 1}) {agency}, Price: {price}\n{link}')
-    return result
+    return '\n\n'.join(result)
 
 
