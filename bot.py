@@ -6,7 +6,9 @@ import logging
 logger = logging.getLogger('cian_bot')
 logger.setLevel(logging.DEBUG)
 
-url = 'https://www.cian.ru/cat.php?deal_type=rent&engine_version=2&metro[0]=85&offer_type=flat&region=1&room2=1&type=4'
+url = 'https://www.cian.ru/cat.php?currency=2&deal_type=rent&engine_version=2' \
+      '&foot_min=15&maxprice=46000&metro%5B0%5D=77&metro%5B1%5D=85&metro%5B2%5D=129' \
+      '&offer_type=flat&only_foot=2&room1=1&room2=1&type=4'
 save_file = 'save.json'
 token = 'Token here'
 

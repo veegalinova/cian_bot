@@ -45,7 +45,7 @@ def get_flats(url, save_file):
             agency = 'Agency' if flat['owner'] == False else 'Owner'
             price = flat['price']
             link = flat['url']
-            result.append(f'{i}) {agency}, Price: {price}\n{link}')
+            result.append(f'{i + 1}) {agency}, Price: {price}\n{link}')
     return result
 
 
