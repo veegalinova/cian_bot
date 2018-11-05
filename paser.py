@@ -14,7 +14,7 @@ def _parse_page(url):
     return flats
 
 
-def get_new(url, save_file):
+def _get_new(url, save_file):
     flats = _parse_page(url)
     result = []
 
@@ -35,3 +35,17 @@ def get_new(url, save_file):
         json.dump(content, file)
 
     return result
+
+
+def get_flats(url, save_file):
+    result = []
+    new_flats = _get_new(url, save_file)
+    if new_flats:
+        for i, flat in enumerate(new_flats):
+            agency = 'Agency' if flat['owner'] == False else 'Owner'
+            price = flat['price']
+            link = flat['url']
+            result.append(f'{i}) {agency}, Price: {price}\n{link}')
+    return result
+
+

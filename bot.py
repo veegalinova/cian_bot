@@ -1,5 +1,5 @@
 from telegram.ext import Updater
-from src.paser import get_new
+from paser import get_flats
 import datetime
 import logging
 
@@ -12,7 +12,7 @@ token = 'Token here'
 
 
 def update(bot, job):
-    flats = get_new(url, save_file)
+    flats = get_flats(url, save_file)
     user_ids = ['User ids here']
     if flats:
         text = str(flats)
